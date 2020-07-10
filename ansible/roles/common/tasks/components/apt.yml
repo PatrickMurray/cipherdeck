@@ -1,0 +1,15 @@
+---
+- name: Update apt
+  apt:
+    update_cache: True
+    upgrade: True
+    autoclean: True
+    autoremove: True
+  become: True
+
+
+- name: Install unattended-upgrades
+  package:
+    name: unattended-upgrades
+    state: latest
+  become: True

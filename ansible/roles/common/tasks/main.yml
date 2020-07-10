@@ -1,0 +1,12 @@
+---
+- name: Include components
+  include_tasks:
+    file: "components/{{ component }}.yml"
+  loop_control:
+    loop_var: component
+  loop:
+    - apt
+    - sudo
+    - python
+    - virtualenv
+    - ansible
